@@ -1,81 +1,61 @@
-# Crossword
+# 🦁 Lions Crossword Creator
 
-A JavaScript-based crossword puzzle application.
+> A complete, browser-based crossword puzzle system built entirely with vanilla HTML, CSS, and JavaScript.
 
-## Features
+[Live Demo](https://lionscrossword.com)
 
-- Interactive crossword puzzle gameplay
-- Clue navigation and validation
-- Responsive design for desktop and mobile
-- Built with vanilla JavaScript
+## Overview
 
-## Getting Started
+This project consists of two interconnected applications:
 
-### Prerequisites
+- **Crossword Creator** — A full-featured tool for creating crossword puzzles. Build puzzles from scratch, choose from multiple grid sizes (Standard 15×15, Magazine 17×17, Sunday 21×21, Mini 5×5, French 9×9, Italian 13×21, and more), manage across and down hints, generate answer keys, and export puzzles as images or custom `.cswd` files.
 
-- A modern web browser
-- No server required — runs entirely client-side
+- **Crossword Player** — A companion application for solving crosswords. Load `.cswd` files created in the Creator or pick from pre-made puzzles. Tracks unique puzzles completed and weekly streaks.
 
-### Installation
+This project was my experience learning to build a full website from bare JavaScript, CSS, and HTML — before AI became a widespread coding tool. It was also my contribution to **Lions Crossword**, the school club I was part of, dedicated to creating and sharing crossword puzzles.
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/dbyale/Crossword.git
-   ```
+## Technical Highlights
 
-2. Open `index.html` in your browser, or serve it with a local server:
-   ```bash
-   # Using Python
-   python -m http.server 8000
-   
-   # Using Node.js
-   npx http-server -p 8000
-   ```
+- **Dynamic DOM rendering** — Grid generation and real-time cell manipulation without any frameworks
+- **Custom `.cswd` file format** — Designed and implemented full import/export support for user-created puzzles
+- **Grid traversal algorithm** — Extracts valid across and down words from a 2D grid layout
+- **Canvas API integration** — Exports puzzles and answer keys as downloadable images via `html2canvas`
+- **Cookie-based persistence** — Auto-saves progress and tracks statistics (unique puzzles, streaks) client-side
+- **Fully responsive UI** — Built entirely with raw CSS and vanilla JavaScript, no frameworks
 
-3. Navigate to `http://localhost:8000`
+## How to Run
 
-## Usage
+No build step or server required — just open `index.html` in a browser.
 
-- Click on a cell to select it
-- Use arrow keys to move between cells
-- Type to enter answers
-- Check your answers against the puzzle solution
+```bash
+git clone https://github.com/dbyale/crossword.git
+cd crossword
+# Open index.html in your browser
+# Or serve locally:
+npx http-server -p 8000
+```
 
 ## Project Structure
 
 ```
-Crossword/
-├── index.html        # Main HTML file
-├── style.css         # Stylesheet
-├── script.js         # Main JavaScript logic
-└── README.md         # This file
+crossword/
+├── index.html              # Crossword Creator entry point
+├── about.html              # About / club info page
+├── createBoard.js          # Grid generation logic
+├── hints.js                # Hint management
+├── answerKey.js            # Answer key generation & export
+├── autoSaveCookie.js       # Local persistence layer
+├── player/                 # Crossword Player application
+│   ├── player.html
+│   ├── loadCrossword.js
+│   └── crosswordCookies.js
+├── assets/
+│   ├── css/                # Stylesheets
+│   ├── libraries/          # html2canvas
+│   └── preMadeFiles.js     # Pre-made puzzle data
+└── LICENSE
 ```
-
-## Technologies Used
-
-- **HTML5** — Structure and markup
-- **CSS3** — Styling and layout
-- **JavaScript (ES6+)** — Puzzle logic and interactivity
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## Acknowledgments
-
-- Puzzle design and clue creation
-- Testing and feedback from early users
-
----
-
-Made with ❤️ by [dbyale](https://github.com/dbyale)
+This project is licensed under the [MIT License](LICENSE).
