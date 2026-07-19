@@ -25,13 +25,11 @@ This project was my experience learning to build a full website from bare JavaSc
 
 ## How to Run
 
-No build step or server required — just open `index.html` in a browser.
-
 ```bash
 git clone https://github.com/dbyale/crossword.git
 cd crossword
 # Open index.html in your browser
-# Or serve locally:
+# Or serve locally (requires Node.js):
 npx http-server -p 8000
 ```
 
