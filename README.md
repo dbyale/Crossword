@@ -1,8 +1,8 @@
-# 🦁 Lions Crossword Creator
+# Lions Crossword Creator
 
 > A complete, browser-based crossword puzzle system built entirely with vanilla HTML, CSS, and JavaScript.
 
-[Live Demo](https://lionscrossword.com)
+[lionscrossword.com](https://lionscrossword.com)
 
 ## Overview
 
