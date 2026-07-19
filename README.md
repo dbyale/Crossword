@@ -2,7 +2,7 @@
 
 > A complete, browser-based crossword puzzle system built entirely with vanilla HTML, CSS, and JavaScript.
 
-[lionscrossword.com](https://lionscrossword.com)
+[lionscrossword.com](http://lionscrossword.com)
 
 ## Overview
 
@@ -25,11 +25,13 @@ This project was my experience learning to build a full website from bare JavaSc
 
 ## How to Run
 
+No build step or server required — just open `index.html` in a browser.
+
 ```bash
 git clone https://github.com/dbyale/crossword.git
 cd crossword
 # Open index.html in your browser
-# Or serve locally (requires Node.js):
+# Or serve locally:
 npx http-server -p 8000
 ```
 
